@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/status.css">
+    <title>FRENZY FIT</title>
+    <link rel="icon" href="img/sodapdf-converted.png">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        box-sizing: border-box;
+        transition: 0.2s linear;
+        text-transform: capitalize;
+        font-family: "Poppins", sans-serif;
+    }
+    body {
+        background-image: url('/img/download.jpg');
+        background-size: cover; /* You can use 'contain', '100% 100%', or other values */
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Optional, for a fixed background */
+        font-family: Arial, sans-serif;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    /* Style for the container div */
+    h2{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    div {
+        text-align: center; /* Centers the links horizontally */
+        margin-top: 20px; /* Adds some space above the links */
+    }
+    
+    /* Style for the links with class "btn" */
+    a.btn {
+        display: inline-block; /* Makes the links inline */
+        margin: 0 10px; /* Adds space between the links */
+        padding: 10px 20px; /* Adds padding inside the links */
+        text-decoration: none; /* Removes the underline from the links */
+        background-color: #daf50c; /* Background color of the links */
+        color: rgb(12, 2, 2); /* Text color of the links */
+        border-radius: 5px; /* Adds rounded corners to the links */
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+    }
+    
+    /* Hover effect for the links */
+    a.btn:hover {
+        background-color: #a3dde8; /* Darker background color on hover */
+    }
+    
+    
+    .container {
+        text-align: center;
+    }
+    
+    .buttons button {
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        border: 1px solid ;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    
+    .buttons button:hover {
+        background-color: #d8e0e1;
+    }
+</style>
+<body>
+    <center>
+    <div class="container">
+        <h2>SELECT YOUR LEVEL</h2>
+        <div>
+            <a href= "begin.html" class="btn">Beginnner</a>
+            <a href="interm.html" class="btn">Intermediate</a>
+            <a href="ad.html" class="btn">Advanced</a>
+        </div>
+        <p id="selectedLevel"></p>
+    </div>
+    </center>
+    <script>
+        var beginnerBtn = document.getElementById("beginnerBtn");
+        var intermediateBtn = document.getElementById("intermediateBtn");
+        var advancedBtn = document.getElementById("advancedBtn");
+        var selectedLevel = document.getElementById("selectedLevel");
+
+beginnerBtn.addEventListener("click", function() {
+    selectedLevel.textContent = "You selected: Beginner";
+});
+
+intermediateBtn.addEventListener("click", function() {
+    selectedLevel.textContent = "You selected: Intermediate";
+});
+
+advancedBtn.addEventListener("click", function() {
+    selectedLevel.textContent = "You selected: Advanced";
+});
+
+    </script>
+</body>
+</html>
